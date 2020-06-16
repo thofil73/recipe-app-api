@@ -6,6 +6,7 @@ from django.urls import reverse
 class AdminSiteTests(TestCase):
 
     def setUp(self):
+        """setup actions performed before every single test"""
         self.client = Client()
         self.admin_user = get_user_model().objects.create_superuser(
             email='admin@navis-ams.com',
